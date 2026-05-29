@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marescalchi — Bespoke Finish Carpentry</title>
+  <meta name="description" content="Marescalchi is a finish carpentry company, crafting bespoke millwork, trim and cabinetry that elevates interior spaces through refined design, exceptional craftsmanship and timeless materials." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand">MARESCALCHI</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#craft">Craft</a>
+        <a href="#work">Work</a>
+        <a href="#materials">Materials</a>
+        <a href="#process">Process</a>
+        <a href="#contact" class="nav__cta">Request a Consultation</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero__media" data-parallax data-speed="0.35" aria-hidden="true">
+      <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/hero-kitchen.jpg">
+        <source src="assets/hero.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__sweep" aria-hidden="true"></div>
+    <div class="hero__grain" aria-hidden="true"></div>
+    <div class="hero__content" data-parallax data-speed="-0.12">
+      <p class="eyebrow eyebrow--light">Finish Carpentry</p>
+      <h1 class="hero__wordmark">MARESCALCHI</h1>
+      <p class="hero__tagline">Elevated. Timeless. Yours.</p>
+      <a href="#contact" class="btn btn--gold">Begin Your Project</a>
+    </div>
+    <a href="#statement" class="hero__scroll" aria-label="Scroll down">Scroll</a>
+  </section>
+
+  <!-- STATEMENT -->
+  <section class="statement" id="statement">
+    <div class="container statement__inner reveal">
+      <p class="eyebrow">Our Brand</p>
+      <p class="statement__lead">
+        Marescalchi is a finish carpentry company — crafting bespoke millwork, trim and cabinetry
+        that elevates interior spaces through <em>refined design</em>, exceptional craftsmanship
+        and timeless materials.
+      </p>
+    </div>
+  </section>
+
+  <!-- CRAFT / SERVICES -->
+  <section class="craft" id="craft">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">What We Make</p>
+        <h2 class="section-title">Finish carpentry, made for your space.</h2>
+      </div>
+      <div class="craft__grid">
+        <article class="craft__card reveal">
+          <span class="craft__num">01</span>
+          <h3>Kitchen Installations</h3>
+          <p>Made-to-measure kitchens fitted with precision — levelled, scribed and set seamlessly into your architecture.</p>
+        </article>
+        <article class="craft__card reveal">
+          <span class="craft__num">02</span>
+          <h3>Bathroom Vanities</h3>
+          <p>Bespoke vanities in figured hardwoods and stone, built to the millimetre for the rooms you begin and end each day in.</p>
+        </article>
+        <article class="craft__card reveal">
+          <span class="craft__num">03</span>
+          <h3>Closets</h3>
+          <p>Fitted wardrobes and dressing rooms — considered storage that makes the everyday feel effortless and ordered.</p>
+        </article>
+        <article class="craft__card reveal">
+          <span class="craft__num">04</span>
+          <h3>Door Installations</h3>
+          <p>Interior doors, casings and hardware hung and aligned to a single exacting standard.</p>
+        </article>
+        <article class="craft__card reveal">
+          <span class="craft__num">05</span>
+          <h3>Paneling</h3>
+          <p>Paneled walls and ceilings that give interiors depth, warmth and architectural calm.</p>
+        </article>
+        <article class="craft__card reveal">
+          <span class="craft__num">06</span>
+          <h3>Trims</h3>
+          <p>Crown, casings and baseboards — the precise lines that frame every room and make a home feel resolved.</p>
+        </article>
+        <article class="craft__card reveal">
+          <span class="craft__num">07</span>
+          <h3>Millwork</h3>
+          <p>Libraries, built-ins and bespoke joinery that disappears into the room and earns its place.</p>
+        </article>
+        <article class="craft__card craft__card--alt reveal">
+          <span class="craft__num">+</span>
+          <p class="craft__alt-label">Also available</p>
+          <h3>Supply &amp; Cabinetry</h3>
+          <p>Beyond installation, we can also provide the pieces themselves — kitchens, bathrooms, cabinetry and closets — sourced and finished to the Marescalchi standard.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK / GALLERY -->
+  <section class="work" id="work">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Selected Work</p>
+        <h2 class="section-title">Details make timeless design.</h2>
+      </div>
+    </div>
+    <div class="work__gallery">
+      <figure class="work__item work__item--tall reveal" data-shade="charcoal" data-parallax data-speed="0.06">
+        <div class="work__img work__img--kitchen" role="img" aria-label="Walnut kitchen with stone island"></div>
+        <figcaption><span>Coastal Residence</span><em>Walnut &amp; Calacatta kitchen</em></figcaption>
+      </figure>
+      <figure class="work__item reveal" data-shade="olive" data-parallax data-speed="0.1">
+        <div class="work__img work__img--library" role="img" aria-label="Built-in library shelving"></div>
+        <figcaption><span>Hillside Home</span><em>Oak library &amp; built-ins</em></figcaption>
+      </figure>
+      <figure class="work__item reveal" data-shade="taupe" data-parallax data-speed="0.14">
+        <div class="work__img work__img--vanity" role="img" aria-label="Bespoke vanity in marble"></div>
+        <figcaption><span>Waterfront Suite</span><em>Rift oak vanity</em></figcaption>
+      </figure>
+      <figure class="work__item work__item--wide reveal" data-shade="charcoal" data-parallax data-speed="0.05">
+        <div class="work__img work__img--dining" role="img" aria-label="Paneled dining room millwork"></div>
+        <figcaption><span>Estate Project</span><em>Paneled dining &amp; bar</em></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- MATERIALS -->
+  <section class="materials" id="materials">
+    <div class="container materials__inner">
+      <div class="materials__copy reveal">
+        <p class="eyebrow">Materials</p>
+        <h2 class="section-title">Timeless by selection, not by trend.</h2>
+        <p class="materials__text">
+          We work in materials chosen to hold up across generations — figured hardwoods,
+          natural stone, hand-finished surfaces and solid hardware. Every selection is made
+          for your space, sampled in your light, and built to a single standard.
+        </p>
+        <ul class="materials__list">
+          <li>Rift &amp; quartersawn hardwoods</li>
+          <li>Hand-applied oil &amp; lacquer finishes</li>
+          <li>Natural stone &amp; porcelain</li>
+          <li>Solid brass &amp; brushed hardware</li>
+        </ul>
+      </div>
+      <div class="materials__swatches reveal" data-parallax data-speed="-0.08" aria-hidden="true">
+        <div class="swatch swatch--walnut"><span>Walnut</span></div>
+        <div class="swatch swatch--oak"><span>White Oak</span></div>
+        <div class="swatch swatch--olive"><span>Mocha</span></div>
+        <div class="swatch swatch--stone"><span>Stone</span></div>
+        <div class="swatch swatch--gold"><span>Brass</span></div>
+        <div class="swatch swatch--charcoal"><span>Charcoal</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote">
+    <div class="container reveal">
+      <blockquote>
+        Elevated design. Timeless craftsmanship. Yours.
+      </blockquote>
+      <p class="quote__sub">
+        Our finish carpentry is designed to integrate seamlessly into your space and lifestyle,
+        bringing beauty and function together in perfect balance.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">The Process</p>
+        <h2 class="section-title">From first drawing to final detail.</h2>
+      </div>
+      <ol class="process__steps">
+        <li class="process__step reveal">
+          <span class="process__num">01</span>
+          <h3>Consultation</h3>
+          <p>We listen first — to your home, your architecture and how you live. Every project begins with understanding.</p>
+        </li>
+        <li class="process__step reveal">
+          <span class="process__num">02</span>
+          <h3>Design</h3>
+          <p>Drawings, materials and hardware are developed and refined together until every detail is resolved.</p>
+        </li>
+        <li class="process__step reveal">
+          <span class="process__num">03</span>
+          <h3>Craft</h3>
+          <p>Each piece is built to measure in our workshop by hand, to a single uncompromising standard.</p>
+        </li>
+        <li class="process__step reveal">
+          <span class="process__num">04</span>
+          <h3>Installation</h3>
+          <p>Precise, considered installation — fitted seamlessly to your space and finished to perfection.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section class="contact" id="contact">
+    <div class="container contact__inner">
+      <div class="contact__copy reveal">
+        <p class="eyebrow eyebrow--light">Begin</p>
+        <h2 class="contact__title">Let's build something timeless.</h2>
+        <p class="contact__text">
+          Tell us about your project. We work with homeowners, architects and designers
+          on a limited number of bespoke commissions each year.
+        </p>
+        <div class="contact__details">
+          <a href="mailto:studio@marescalchi.com">studio@marescalchi.com</a>
+          <span>Florida, USA · By appointment</span>
+        </div>
+      </div>
+      <form class="contact__form reveal" id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="field">
+          <label for="type">Project Type</label>
+          <select id="type" name="type">
+            <option>Kitchen Installation</option>
+            <option>Bathroom Vanity</option>
+            <option>Closets</option>
+            <option>Door Installation</option>
+            <option>Paneling</option>
+            <option>Trims</option>
+            <option>Millwork</option>
+            <option>Supply &amp; Cabinetry</option>
+            <option>Full Home</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">About your project</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn--gold btn--full">Request a Consultation</button>
+        <p class="contact__note" id="formNote" hidden>Thank you — we'll be in touch shortly.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__word">MARESCALCHI</span>
+        <span class="footer__tag">Elevated. Timeless. Yours.</span>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#craft">Craft</a>
+        <a href="#work">Work</a>
+        <a href="#materials">Materials</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer__legal">© <span id="year"></span> Marescalchi · A Finish Carpentry Company</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
