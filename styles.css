@@ -146,15 +146,9 @@ a { color: inherit; text-decoration: none; }
 }
 .hero__media {
   position: absolute; inset: -8% 0; /* extra height for parallax travel */
-  background:
-    linear-gradient(180deg, rgba(28,20,16,0.35), rgba(28,20,16,0.55)),
-    image-set(url("assets/hero-kitchen.jpg") 1x);
-  background-image:
-    linear-gradient(180deg, rgba(28,20,16,0.35), rgba(28,20,16,0.55)),
-    url("assets/hero-kitchen.jpg");
-  background-size: cover; background-position: center;
+  /* solid dark backdrop only — video fills this; no still photo before playback */
+  background: radial-gradient(120% 100% at 50% 35%, #2a1c14 0%, #1c130d 60%, #140c08 100%);
   will-change: transform;
-  animation: heroKenBurns 26s ease-in-out infinite alternate;
 }
 /* Hero video — covers the backdrop; falls back to the gradient if missing */
 .hero__video {
@@ -163,10 +157,6 @@ a { color: inherit; text-decoration: none; }
   transition: opacity 1.2s ease;
 }
 .hero__video.is-ready { opacity: 1; }
-@keyframes heroKenBurns {
-  from { transform: scale(1.04); }
-  to   { transform: scale(1.14) translate3d(-1.5%, -1%, 0); }
-}
 /* subtle "wood grain" texture overlay built in CSS */
 .hero__media::after {
   content: ""; position: absolute; inset: 0; z-index: 2;
@@ -399,28 +389,43 @@ a { color: inherit; text-decoration: none; }
   background: var(--gold); transform: rotate(45deg);
 }
 .materials__swatches {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem;
+  perspective: 1000px;
 }
+/* real material samples — floating chips of the actual surface */
 .swatch {
   aspect-ratio: 1; position: relative; display: flex; align-items: flex-end;
-  padding: 0.9rem; box-shadow: 0 8px 28px rgba(0,0,0,.18);
+  padding: 0.95rem; border-radius: 14px; overflow: hidden;
+  background-size: cover; background-position: center; background-repeat: no-repeat;
+  box-shadow:
+    0 20px 42px rgba(0,0,0,0.42),
+    0 4px 10px rgba(0,0,0,0.28),
+    inset 0 0 0 1px rgba(255,255,255,0.08);
+  transition: transform .55s cubic-bezier(.2,.8,.2,1), box-shadow .55s ease;
+  will-change: transform;
+}
+.swatch::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(transparent 52%, rgba(18,11,7,0.72));
 }
 .swatch span {
+  position: relative; z-index: 1;
   font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--ivory); text-shadow: 0 1px 4px rgba(0,0,0,.5);
+  color: var(--ivory); text-shadow: 0 1px 6px rgba(0,0,0,.7);
 }
-.swatch--walnut   {
-  background-image: linear-gradient(160deg, rgba(40,25,16,0.15), rgba(40,25,16,0.45)), url("assets/wood-texture.jpg");
-  background-size: cover; background-position: center;
+.swatch:hover {
+  transform: translateY(-8px) scale(1.015);
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.52),
+    0 8px 16px rgba(0,0,0,0.32),
+    inset 0 0 0 1px rgba(200,169,114,0.4);
 }
-.swatch--oak      { background: linear-gradient(135deg,#cdb392,#a98e6b); }
-.swatch--oak span { color: var(--charcoal); text-shadow:none; }
-.swatch--olive    { background: linear-gradient(135deg,#7a5740,#4a3527); }
-.swatch--stone    { background: linear-gradient(135deg,#ece7e0,#cfc7bb); }
-.swatch--stone span { color: var(--charcoal); text-shadow:none; }
-.swatch--gold     { background: linear-gradient(135deg,#d9bd86,#b8975c); }
-.swatch--gold span { color: var(--charcoal); text-shadow:none; }
-.swatch--charcoal { background: linear-gradient(135deg,#2b2b2b,#131313); }
+.swatch--walnut   { background-image: url("assets/mat-walnut.jpg"); }
+.swatch--oak      { background-image: url("assets/mat-oak.jpg"); }
+.swatch--olive    { background-image: url("assets/mat-mocha.jpg"); }
+.swatch--stone    { background-image: url("assets/mat-stone.jpg"); }
+.swatch--gold     { background-image: url("assets/mat-brass.jpg"); }
+.swatch--charcoal { background-image: url("assets/mat-charcoal.jpg"); }
 
 /* ============================================================
    QUOTE
